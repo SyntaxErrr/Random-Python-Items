@@ -1,0 +1,23 @@
+#syntaxErrr
+import json;
+
+class className:
+    def __init__(self, var1, var2, var3):
+        self.var1 = var1,
+        self.var2 = var2,
+        self.var3 = var3
+
+def toJson(item):
+    json.dumps(item)
+
+meaningfulIdentifier = className("var1", "var2", "var3")
+
+meaningfulIdentifierDict = {
+    "var1": meaningfulIdentifier.var1,
+    "var2": meaningfulIdentifier.var2,
+    "var3": meaningfulIdentifier.var3
+}
+
+toJson(meaningfulIdentifierDict)
+
+print(meaningfulIdentifierDict)
