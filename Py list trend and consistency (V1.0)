@@ -1,0 +1,42 @@
+#syntaxErrr
+
+length = int(input('number of data points: '))
+data = []
+trend = "neutral"
+consistency = ""
+variance = 0
+
+for i in range(length):
+    data.append(int(input('data point number '+ str(i + 1) + ': ')))
+
+start = data[0]
+end = data[length-1]
+
+
+gradient = (end - start)
+
+if (gradient > 0):
+    trend = "positive"
+else:
+    trend = "negative"
+
+if (gradient > 0):
+    for i in range(1, length-1):
+        if (data[i] < data[0]):
+            variance = variance + 1
+else:
+    for i in range(1, length-1):
+        if (data[i] > data[0]):
+            variance = variance + 1
+if (variance > length/2):
+    consistency = "Inconsistent"
+else:
+    consistency = "Consistent"
+
+
+listInfo = {
+    "Trend" : trend,
+    "Consistency" : consistency
+}
+
+print (listInfo)
